@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'buttons.dart';
 import 'package:math_expressions/math_expressions.dart';
 import 'package:bitsdojo_window/bitsdojo_window.dart';
 
 void main() {
   runApp(MyApp());
+
+  doWhenWindowReady(() {
+    const initialSize = Size(300, 530);
+    appWindow.minSize = initialSize;
+    appWindow.maxSize = initialSize;
+    appWindow.size = initialSize;
+    appWindow.alignment = Alignment.centerRight;
+    appWindow.show();
+  });
 }
 
 class MyApp extends StatelessWidget {
@@ -55,7 +65,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Color(0xFFF1F1F1),
       body: WindowBorder(
-        width: 2,
+        width: 10,
         color: Color(0xFF16C88D),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,

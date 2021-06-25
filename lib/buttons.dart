@@ -18,24 +18,28 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(10),
-      child: Material(
-        color: color,
-        borderRadius: BorderRadius.circular(40),
-        child: InkWell(
+      padding: EdgeInsets.all(5),
+      child: Container(
+        width: 15,
+        height: 15,
+        child: Material(
+          color: color,
           borderRadius: BorderRadius.circular(40),
-          radius: 40,
-          onTap: buttontapped,
-          // splashColor: Color(0xFF16C88D),
-          highlightColor: Color(0xFF16C88D),
-          // focusColor: Color(0xFF16C88D),
-          child: Center(
-            child: Text(
-              buttonText,
-              style: TextStyle(
-                color: textColor,
-                fontSize: 25,
-                fontWeight: FontWeight.w400,
+          child: InkWell(
+            borderRadius: BorderRadius.circular(40),
+            radius: 20,
+            onTap: buttontapped,
+            // splashColor: Color(0xFF16C88D),
+            highlightColor: Color(0xFF16C88D),
+            // focusColor: Color(0xFF16C88D),
+            child: Center(
+              child: Text(
+                buttonText,
+                style: TextStyle(
+                  color: textColor,
+                  fontSize: 25,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
             ),
           ),
